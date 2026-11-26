@@ -18,6 +18,6 @@ python3 -m http.server 8080 --bind 127.0.0.1 --directory public
 
 在腾讯云 EdgeOne Pages 中选择「导入 Git 仓库」，连接本仓库，生产分支选 `main`，项目根目录用仓库根目录，框架选静态站点。提交到生产分支后由平台自动发布。`edgeone.json` 定义构建检查、输出目录 `public` 以及 `/index.html` 到 `/` 的跳转。构建只需 Node.js，部署环境变量可留空。[腾讯云配置说明](https://edgeone.cloud.tencent.com/pages/document/162936771610066944)
 
-首次部署后，用 Pages 预览地址检查六个页面、首页照片、微信搜索名称复制和页脚两个备案链接。在项目中绑定 `jinyifangchan.com`，按控制台给出的记录设置 DNS。正式域名 HTTPS 验收通过且旧 DNS 的 TTL 已过后，即可退役原官网入口。小程序 API 和员工后台继续使用 `api.cqwushi.com`。
+首次部署后，用 Pages 预览地址检查六个页面、首页照片、微信搜索名称复制和页脚两个备案链接。在项目中绑定 `jinyifangchan.com`，按控制台给出的记录设置 DNS。解析生效后，用正式域名复核 HTTPS、页面和静态资源。原 VPS 官网已于 2026-11-26 下线。小程序 API 和员工后台继续使用 `api.cqwushi.com`。
 
 官网首页和五个内页源自 [zhaoshang 的拆分前版本](https://github.com/linjunsen470-a11y/zhaoshang/tree/50e961d0c95dd0f728c798bd4378d3334c1a82ef)。
